@@ -1,0 +1,18 @@
+<div ng-cloak>
+    <div class="row">
+        <div class="col-md-12">
+            <!--<h1 data-translate="home.title">Welcome, Java Hipster!</h1>
+            <p class="lead" data-translate="home.subtitle">This is your homepage</p>-->
+
+            <div ng-switch="vm.isAuthenticated()">
+                <div class="alert alert-success-custom" ng-switch-when="true" data-translate="home.logged.message" translate-values="{username: '{{vm.account.login}}'}">
+                    You are logged in as user "{{vm.account.login}}".
+                </div>
+
+                <!--<div class="alert alert-warning-custom" ng-switch-when="false" data-translate="global.messages.info.authenticated" translate-compile>
+                    If you want to <a class="alert-link" href="" ng-click="vm.login()">sign in</a>, you can try the default accounts:<br/>- Administrator (login="admin" and password="admin") <br/>- User (login="user" and password="user").
+                </div>-->
+            </div>
+        </div>
+    </div>
+</div>
